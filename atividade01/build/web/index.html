@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Página nova</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="header">
+                <h1>Escola Virtual Big Time</h1>
+                <div class="menu">
+                    <div class="menu-item"><a href="#">Inicio</a></div>
+                    <div class="menu-item"><a href="#">Cursos</a></div>
+                    <div class="menu-item"><a href="#">Contatos</a></div>
+                    <div class="spacer"></div> <!-- Adiciona um elemento para separar os itens -->
+                    <div class="menu-item" id="login"><a href="#">Login ou cadastrar</a></div>
+                </div>
+            </div>
+            <div class="courses">
+                <h2>Nossos cursos e horários</h2>
+                <div class="course">
+                    <form action="Controle.jsp" method="POST">
+                        <input type="text" name="diaSemana" placeholder="Dia da Semana">
+                        <input type="text" name="horarioInicio" placeholder="Horario de Inicio">
+                        <input type="text" name="horarioFim" placeholder="Horario Fim">
+                        <input type="text" name="disciplinaId" placeholder="Disciplina">
+                        <input type="text" name="professorId" placeholder="Id do Professor">
+                        <input type="submit" value="Cadastrar">
+                    </form>
+                    <h3>Moldamos nosso curso online para se ajustar ao seu horário de ensino.<br> Ensine quando for mais conveniente para você!</h3>
+                    <p>Descrição do Curso e horarios</p>
+                    <a href="#"> Saiba mais</a>
+                </div>
+            </div>
+            <div class="hero">
+                <h2> Venha fazer parte da Escola Big Time </h2>
+                <p> Explore nossos curso online e transforme sua educação e se encaixe com o nosso cronograma de horários</p>
+                <input class="cta-button" type="submit" value="Descubra nossos cursos e horários" />
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2023  Big Time uma Escola virtual. </p>
+        </div>
+
+    </body>
+
+</html>
