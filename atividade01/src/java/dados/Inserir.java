@@ -11,6 +11,60 @@ public class Inserir {
      *
      * @param arm
      */
+    public void inserirDisciplina(Armazena arm) {
+        PreparedStatement pstm = null;
+        Connection conn = null;
+        
+        String sql = "INSERT INTO disciplinas (nome)" + "VALUES (?)";
+        
+        try {
+            conn = (Connection) Conexao.getConnection();
+            pstm = conn.prepareStatement(sql);
+            pstm.setString(1, arm.getNomeDaDisciplina());
+            pstm.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            try {
+                if (pstm != null) {
+                    pstm.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    public void inserirProfessor(Armazena arm) {
+        PreparedStatement pstm = null;
+        Connection conn = null;
+
+        String sql = "INSERT INTO professores (nome)" + " VALUES(?)";
+
+        try {
+            conn = (Connection) Conexao.getConnection();
+            pstm = conn.prepareStatement(sql);
+            pstm.setString(1, arm.getNomeDoProfessor());
+            pstm.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            try {
+                if (pstm != null) {
+                    pstm.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
     public void inserirDados(Armazena arm) {
 
         PreparedStatement pstm = null;

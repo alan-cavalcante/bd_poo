@@ -7,7 +7,8 @@ public class Armazena {
     private String horarioFim;
     private int disciplinaId;
     private int professorId;
-    
+    private String nomeDoProfessor;
+    private String nomeDaDisciplina;
 
     public String getDiaSemana() {
         return diaSemana;
@@ -16,7 +17,7 @@ public class Armazena {
     public void setdiaSemana(String diaSemana) {
         this.diaSemana = diaSemana;
     }
-    
+
     public String getHorarioInicio() {
         return horarioInicio;
     }
@@ -48,5 +49,20 @@ public class Armazena {
     public void setprofessorId(int professorId) {
         this.professorId = professorId;
     }
+
+    public String getNomeDoProfessor() {
+        return nomeDoProfessor;
+    }
+
+    public void setNomeDoProfessor(String nomeDoProfessor) {
+        this.nomeDoProfessor = nomeDoProfessor;
+    }
+
+    public String getNomeDaDisciplina() {
+        return nomeDaDisciplina;
+    }
     
+    public void setNomeDaDisciplina(String nomeDaDisciplina){
+        this.nomeDaDisciplina = nomeDaDisciplina;
+    }
 }

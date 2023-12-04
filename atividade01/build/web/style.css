@@ -70,18 +70,21 @@ body {
 .cta-button:hover{
     transform: scale(1.1);
 }
-.courses {
-    text-align: center;
-    padding: 2rem;
+.cadastroHorario {
+    padding: 5px;
     background-color: #e4f0f7;
-    width: 50%;
+}
+p {
+    text-transform: uppercase;
 }
 
-.course {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+.cadastroDisciplina {
+    background-color: #aeb9bf;
+    padding: 5px;
+}
+.cadastroProfessor {
+    background-color: #333;
+    padding: 5px;
 }
 
 .footer {
