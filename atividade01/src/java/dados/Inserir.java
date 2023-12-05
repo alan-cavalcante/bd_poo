@@ -15,7 +15,7 @@ public class Inserir {
         PreparedStatement pstm = null;
         Connection conn = null;
         
-        String sql = "INSERT INTO disciplinas (nome)" + "VALUES (?)";
+        String sql = "INSERT INTO disciplinas (nomedisc)" + "VALUES (?)";
         
         try {
             conn = (Connection) Conexao.getConnection();
@@ -42,7 +42,7 @@ public class Inserir {
         PreparedStatement pstm = null;
         Connection conn = null;
 
-        String sql = "INSERT INTO professores (nome)" + " VALUES(?)";
+        String sql = "INSERT INTO professores (nomeprof)" + " VALUES(?)";
 
         try {
             conn = (Connection) Conexao.getConnection();
@@ -70,7 +70,7 @@ public class Inserir {
         PreparedStatement pstm = null;
         Connection conn = null;
 
-        String sql = "INSERT INTO horarios (dia_semana, horario_inicio, horario_fim, professor_id, disciplina_id)" + " VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO horarios (dia_semana, horario_inicio, horario_fim, profId, discId)" + " VALUES(?,?,?,?,?)";
 
         try {
             conn = (Connection) Conexao.getConnection();

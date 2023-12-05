@@ -12,7 +12,7 @@ public class Conexao {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 String URL="jdbc:mysql://localhost:3306/atividade01";
                 conn = DriverManager.getConnection(URL,"root", "admin");
-                System.out.println("Conexão efetuada.");
+                System.out.println("Conn efetuada.");
                
             }catch(SQLException e){
                System.out.println(e.getMessage());

@@ -15,10 +15,10 @@ public class Consulta {
         PreparedStatement pstm = null;
         Connection conn = null;
 
-        String sql = "SELECT Horarios.dia_semana, Horarios.horario_inicio, Horarios.horario_fim, Professores.nome, Disciplinas.nome"
+        String sql = "SELECT Horarios.dia_semana, Horarios.horario_inicio, Horarios.horario_fim, Professores.nomeprof, Disciplinas.nomedisc"
                 + "FROM Horarios"
-                + "JOIN Professores ON Horarios.professor_id = Professores.professor_id"
-                + "JOIN Disciplinas ON Horarios.disciplina_id = Disciplinas.disciplina_id;";
+                + "JOIN Professores ON Horarios.profId = Professores.prof_id"
+                + "JOIN Disciplinas ON Horarios.discId = Disciplinas.disc_id;";
 
         try {
             conn = (Connection) Conexao.getConnection();
