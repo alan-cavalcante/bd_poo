@@ -25,5 +25,6 @@
            
            a.inserirProfessor(arm);
         %>
+        <a href="index.html">Voltar</a>
     </body>
 </html>
