@@ -15,9 +15,9 @@
            String jsp_horarioInicio = request.getParameter("horarioInicio");
            String jsp_horarioFim = request.getParameter("horarioFim");
            String jsp_disciplinaId = request.getParameter("disciplinaId");
-           int discId = Integer.parseInt(jsp_disciplinaId);
+           int jsp_discId = Integer.parseInt(jsp_disciplinaId);
            String jsp_professorId = request.getParameter("professorId");
-           int profId = Integer.parseInt(jsp_professorId);
+           int jsp_profId = Integer.parseInt(jsp_professorId);
            
            Inserir a = new Inserir();
            Armazena arm = new Armazena();
@@ -25,8 +25,8 @@
            arm.setdiaSemana(jsp_diaSemana);
            arm.sethorarioInicio(jsp_horarioInicio);
            arm.sethorarioFim(jsp_horarioFim);
-           arm.setdisciplinaId(discId);
-           arm.setprofessorId(profId);
+           arm.setdisciplinaId(jsp_discId);
+           arm.setprofessorId(jsp_profId);
            
            Conexao b = new Conexao();
            
