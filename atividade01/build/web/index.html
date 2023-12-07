@@ -48,6 +48,22 @@
                     <input type="submit" value="Consultar">
                 </form>
             </div>
+            <button onclick="chamarServlet()">Clique-me</button>
+
+            <script>
+                function chamarServlet() {
+                    // Use AJAX para chamar o Servlet ou Controller
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            // Atualize a parte da página desejada com a resposta do Servlet
+                            document.body.innerHTML += xhr.responseText;
+                        }
+                    };
+                    xhr.open("GET", "MeuServlet", true);
+                    xhr.send();
+                }
+            </script>
         </div>
         <div class="footer">
             <p>&copy; 2023  Big Time uma Escola virtual. </p>
