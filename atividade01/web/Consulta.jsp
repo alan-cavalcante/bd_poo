@@ -24,27 +24,37 @@
     </head>
     <body>
         <h1>Horarios</h1>
+        <!--<tr>
+            <th>Dia da Semana</th>
+            <th>Horário Início</th>
+            <th>Horário Fim</th>
+            <th>Professor ID</th>
+            <th>Disciplina ID</th>
+            <th>Nome do Professor</th>
+            <th>Nome da Disciplina</th>
+        </tr>-->
         <table border="1">
-            <tr>
-                <th>Dia da Semana</th>
-                <th>Horário Início</th>
-                <th>Horário Fim</th>
-                <th>Professor ID</th>
-                <th>Disciplina ID</th>
-                <th>Nome do Professor</th>
-                <th>Nome da Disciplina</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Horários</th>
+                    <th>Segunda-feira</th>
+                    <th>Terça-feira</th>
+                    <th>Quarta-feira</th>
+                    <th>Quinta-feira</th>
+                    <th>Sexta-feira</th>
+                </tr>
+            </thead>
             <% for (DadosConsultados objeto : dados) { %>
             <tr>
-                <td><%= objeto.getDiaSemana() %></td>
-                <td><%= objeto.getHorarioInicio() %></td>
-                <td><%= objeto.getHorarioFim() %></td>
-                <td><%= objeto.getProfessorId() %></td>
-                <td><%= objeto.getDisciplinaId() %></td>
-                <td><%= objeto.getNomeDoProfessor() %></td>
-                <td><%= objeto.getNomeDaDisciplina() %></td>
+                <td><%= objeto.getHorarioInicio() %> - <%= objeto.getHorarioFim() %></td>
+                <td><%= objeto.getNomeDoProfessor() %> <br> <%= objeto.getNomeDaDisciplina() %></td>
+                <td><%=  objeto.getDiaSemana() %></td>
+                <!--<td><%= objeto.getProfessorId() %></td>-->
+                <!--<td><%= objeto.getDisciplinaId() %></td>-->
+                <!--<td><%= objeto.getNomeDaDisciplina() %></td>-->
+                <!--<td><%= objeto.getHorarioFim() %></td>-->
             </tr>
-            
+
             <% } %>
         </table>
     </body>

@@ -18,6 +18,7 @@
            
            arm.setNomeDoProfessor(jsp_nomeDoProfessor);
            
+           
            Conexao b = new Conexao();
            
            out.println("O professor " + arm.getNomeDoProfessor() + " foi cadastrado.");
