@@ -23,7 +23,7 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
-        <h1>Horarios</h1>
+<!--        <h1> <bold> Horários </bold> </h1>-->
         <!--<tr>
             <th>Dia da Semana</th>
             <th>Horário Início</th>

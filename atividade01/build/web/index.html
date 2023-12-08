@@ -7,48 +7,52 @@
     </head>
     <body>
         <div class="container">
+            <div id="menucadastros" >
+                <div class="cadastroProfessor">
+                    <p>Cadastre o professor</p>
+                    <div class="course">
+                        <form class="formProfessor" action="ControleProfessor.jsp" method="POST" >
+                            <input class="inputGeral" type="text" name="nomeProf" placeholder="Digite o nome do professor" >
+                            <input class="inputCadastrar" type="submit"  value="Cadastrar" >
+                        </form>
+                    </div>
+                </div>
 
-            <div class="cadastroProfessor">
-                <p>Cadastre o professor</p>
-                <div class="course">
-                    <form class="formProfessor" action="ControleProfessor.jsp" method="POST" >
-                        <input class="inputGeral" type="text" name="nomeProf" placeholder="Digite o nome do professor" >
-                        <input class="inputCadastrar" type="submit"  value="Cadastrar" >
-                    </form>
+                <div class="cadastroDisciplina">
+                    <p>Cadastre a disciplina</p>
+                    <div class="course">
+                        <form class="formDisciplina" action="ControleDisciplina.jsp" method="POST" >
+                            <input class="inputGeral" type="text" name="nomeDisc" placeholder="Digite o nome da disciplina" >
+                            <input class="inputCadastrar" type="submit" value="Cadastrar" >
+                        </form>
+                    </div>
+                </div>
+
+                <div class="cadastroHorario">
+                    <p>Cadastre o horário</p>
+                    <div class="course">
+                        <form class="formHorarios" action="Controle.jsp" method="POST">
+                            <input class="inputGeral" type="text" name="diaSemana" placeholder="Dia da Semana">
+                            <input class="inputGeral" type="text" name="horarioInicio" placeholder="Horario de Inicio">
+                            <input class="inputGeral" type="text" name="horarioFim" placeholder="Horario Fim">
+                            <input class="inputGeral" type="text" name="disciplinaId" placeholder="Disciplina">
+                            <input class="inputGeral" type="text" name="professorId" placeholder="Id do Professor">
+                            <input class="inputCadastrar" type="submit" value="Cadastrar">
+                        </form>
+                    </div>
                 </div>
             </div>
-
-            <div class="cadastroDisciplina">
-                <p>Cadastre a disciplina</p>
-                <div class="course">
-                    <form class="formDisciplina" action="ControleDisciplina.jsp" method="POST" >
-                        <input class="inputGeral" type="text" name="nomeDisc" placeholder="Digite o nome da disciplina" >
-                        <input class="inputCadastrar" type="submit" value="Cadastrar" >
-                    </form>
+            <div id="principal" >
+                <div class="consultaHorario" >
+                    <p>Horário atual</p>
+                    <!--
+                    <form action="Consulta.jsp" method="POST">
+                        <input type="submit" value="Consultar">
+                    </form>-->
                 </div>
+                <button class="inputCadastrar" onclick="chamarServlet()">Consultar</button>
+                <div id="areaDeAmostra"></div>
             </div>
-
-            <div class="cadastroHorario">
-                <p>Cadastre o horário</p>
-                <div class="course">
-                    <form class="formHorarios" action="Controle.jsp" method="POST">
-                        <input class="inputGeral" type="text" name="diaSemana" placeholder="Dia da Semana">
-                        <input class="inputGeral" type="text" name="horarioInicio" placeholder="Horario de Inicio">
-                        <input class="inputGeral" type="text" name="horarioFim" placeholder="Horario Fim">
-                        <input class="inputGeral" type="text" name="disciplinaId" placeholder="Disciplina">
-                        <input class="inputGeral" type="text" name="professorId" placeholder="Id do Professor">
-                        <input class="inputCadastrar" type="submit" value="Cadastrar">
-                    </form>
-                </div>
-            </div>
-
-            <div class="consultaHorario" >
-                <p>Horário atual</p>
-                <form action="Consulta.jsp" method="POST">
-                    <input type="submit" value="Consultar">
-                </form>
-            </div>
-            <button onclick="chamarServlet()">Clique-me</button>
 
             <script>
                 function chamarServlet() {
@@ -57,16 +61,17 @@
                     xhr.onreadystatechange = function () {
                         if (xhr.readyState === 4 && xhr.status === 200) {
                             // Atualize a parte da página desejada com a resposta do Servlet
-                            document.body.innerHTML += xhr.responseText;
+                            document.getElementById("areaDeAmostra").innerHTML = xhr.responseText;
                         }
                     };
-                    xhr.open("GET", "MeuServlet", true);
+                    // xhr.open("GET", "MeuServlet", true);
+                    xhr.open("GET", "Consulta.jsp", true);
                     xhr.send();
                 }
             </script>
         </div>
         <div class="footer">
-            <p>&copy; 2023  Big Time uma Escola virtual. </p>
+            <p>Alan Cavalcante, João Batista, Lukas Santana, Ryan Costa, João Paulo Santos. </p>
         </div>
 
     </body>
