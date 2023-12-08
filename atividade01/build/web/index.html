@@ -11,9 +11,9 @@
             <div class="cadastroProfessor">
                 <p>Cadastre o professor</p>
                 <div class="course">
-                    <form action="ControleProfessor.jsp" method="POST" >
-                        <input type="text" name="nomeProf" placeholder="Digite o nome do professor" >
-                        <input type="submit"  value="Cadastrar" >
+                    <form class="formProfessor" action="ControleProfessor.jsp" method="POST" >
+                        <input class="inputGeral" type="text" name="nomeProf" placeholder="Digite o nome do professor" >
+                        <input class="inputCadastrar" type="submit"  value="Cadastrar" >
                     </form>
                 </div>
             </div>
@@ -21,9 +21,9 @@
             <div class="cadastroDisciplina">
                 <p>Cadastre a disciplina</p>
                 <div class="course">
-                    <form action="ControleDisciplina.jsp" method="POST" >
-                        <input type="text" name="nomeDisc" placeholder="Digite o nome da disciplina" >
-                        <input type="submit" value="Cadastrar" >
+                    <form class="formDisciplina" action="ControleDisciplina.jsp" method="POST" >
+                        <input class="inputGeral" type="text" name="nomeDisc" placeholder="Digite o nome da disciplina" >
+                        <input class="inputCadastrar" type="submit" value="Cadastrar" >
                     </form>
                 </div>
             </div>
@@ -31,13 +31,13 @@
             <div class="cadastroHorario">
                 <p>Cadastre o horário</p>
                 <div class="course">
-                    <form action="Controle.jsp" method="POST">
-                        <input type="text" name="diaSemana" placeholder="Dia da Semana">
-                        <input type="text" name="horarioInicio" placeholder="Horario de Inicio">
-                        <input type="text" name="horarioFim" placeholder="Horario Fim">
-                        <input type="text" name="disciplinaId" placeholder="Disciplina">
-                        <input type="text" name="professorId" placeholder="Id do Professor">
-                        <input type="submit" value="Cadastrar">
+                    <form class="formHorarios" action="Controle.jsp" method="POST">
+                        <input class="inputGeral" type="text" name="diaSemana" placeholder="Dia da Semana">
+                        <input class="inputGeral" type="text" name="horarioInicio" placeholder="Horario de Inicio">
+                        <input class="inputGeral" type="text" name="horarioFim" placeholder="Horario Fim">
+                        <input class="inputGeral" type="text" name="disciplinaId" placeholder="Disciplina">
+                        <input class="inputGeral" type="text" name="professorId" placeholder="Id do Professor">
+                        <input class="inputCadastrar" type="submit" value="Cadastrar">
                     </form>
                 </div>
             </div>
