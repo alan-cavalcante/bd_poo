@@ -36,19 +36,16 @@
         <table border="1">
             <thead>
                 <tr>
-                    <th>Horários</th>
-                    <th>Segunda-feira</th>
-                    <th>Terça-feira</th>
-                    <th>Quarta-feira</th>
-                    <th>Quinta-feira</th>
-                    <th>Sexta-feira</th>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                    <th>Professor / Disciplina</th>
                 </tr>
             </thead>
             <% for (DadosConsultados objeto : dados) { %>
             <tr>
+                <td><%=  objeto.getDiaSemana() %></td>
                 <td><%= objeto.getHorarioInicio() %> - <%= objeto.getHorarioFim() %></td>
                 <td><%= objeto.getNomeDoProfessor() %> <br> <%= objeto.getNomeDaDisciplina() %></td>
-                <td><%=  objeto.getDiaSemana() %></td>
                 <!--<td><%= objeto.getProfessorId() %></td>-->
                 <!--<td><%= objeto.getDisciplinaId() %></td>-->
                 <!--<td><%= objeto.getNomeDaDisciplina() %></td>-->
