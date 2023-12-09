@@ -18,6 +18,7 @@
            int jsp_discId = Integer.parseInt(jsp_disciplinaId);
            String jsp_professorId = request.getParameter("professorId");
            int jsp_profId = Integer.parseInt(jsp_professorId);
+           String jsp_turno = request.getParameter("turno");
            
            Inserir a = new Inserir();
            Armazena arm = new Armazena();
@@ -27,6 +28,7 @@
            arm.sethorarioFim(jsp_horarioFim);
            arm.setdisciplinaId(jsp_discId);
            arm.setprofessorId(jsp_profId);
+           arm.setTurno(jsp_turno);
            
            Conexao b = new Conexao();
            
@@ -37,6 +39,7 @@
            out.println(arm.getHorarioFim());
            out.println(arm.getDisciplinaId());
            out.println(arm.getProfessorId());
+           out.println(arm.getTurno());
            
            a.inserirDados(arm);
         %>

@@ -9,6 +9,7 @@ public class Armazena {
     private int professorId;
     private String nomeDoProfessor;
     private String nomeDaDisciplina;
+    private String turno;
 
     public String getDiaSemana() {
         return diaSemana;
@@ -64,5 +65,12 @@ public class Armazena {
     
     public void setNomeDaDisciplina(String nomeDaDisciplina){
         this.nomeDaDisciplina = nomeDaDisciplina;
+    }
+    public String getTurno() {
+        return turno;
+    }
+    
+    public void setTurno(String turno){
+        this.turno = turno;
     }
 }

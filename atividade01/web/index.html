@@ -31,16 +31,24 @@
                 <div class="cadastroHorario">
                     <p>Cadastre o horário</p>
                     <div class="course">
+                        <div style="display: flex; align-items: center; justify-content: center;" >
+                            <button class="inputConsultar" onclick="chamarConsultaIdsP()">Consultar ID Professores </button>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: center;" >
+                            <button class="inputConsultar" onclick="chamarConsultaIdsD()">Consultar ID Disciplinas </button>
+                        </div>
                         <form class="formHorarios" action="Controle.jsp" method="POST">
                             <input class="inputGeral" type="text" name="diaSemana" placeholder="Dia da Semana">
                             <input class="inputGeral" type="text" name="horarioInicio" placeholder="Horario de Inicio">
                             <input class="inputGeral" type="text" name="horarioFim" placeholder="Horario Fim">
-                            <input class="inputGeral" type="text" name="disciplinaId" placeholder="Disciplina">
+                            <input class="inputGeral" type="text" name="disciplinaId" placeholder="Id da Disciplina">
                             <input class="inputGeral" type="text" name="professorId" placeholder="Id do Professor">
+                            <input class="inputGeral" type="text" name="turno" placeholder="Turno">
                             <input class="inputCadastrar" type="submit" value="Cadastrar">
                         </form>
                     </div>
                 </div>
+                <div id="janelaDeIds"></div>
             </div>
             <div id="principal" >
                 <div class="consultaHorario" >
@@ -55,12 +63,33 @@
             </div>
 
             <script>
+
+                function chamarConsultaIdsD() {
+                    const xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            document.getElementById("areaDeAmostra").innerHTML = xhr.responseText;
+                        }
+                    };
+                    xhr.open("GET", "ConsultaIdsD.jsp", true);
+                    xhr.send();
+                }
+                
+                function chamarConsultaIdsP() {
+                    const xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            document.getElementById("areaDeAmostra").innerHTML = xhr.responseText;
+                        }
+                    };
+                    xhr.open("GET", "ConsultaIdsP.jsp", true);
+                    xhr.send();
+                }
+
                 function chamarServlet() {
-                    // Use AJAX para chamar o Servlet ou Controller
                     var xhr = new XMLHttpRequest();
                     xhr.onreadystatechange = function () {
                         if (xhr.readyState === 4 && xhr.status === 200) {
-                            // Atualize a parte da página desejada com a resposta do Servlet
                             document.getElementById("areaDeAmostra").innerHTML = xhr.responseText;
                         }
                     };

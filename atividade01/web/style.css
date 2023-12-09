@@ -24,7 +24,7 @@ body {
 }
 
 #menucadastros {
-    
+    max-width: 20%;
 }
 
 #principal {
@@ -56,9 +56,9 @@ body {
     color: white;
     border-radius: 10px;
     margin: 3px;
-    border: 2px solid green; /* Largura, estilo e cor da borda */
-    border-radius: 5px; /* Raio da borda para suavizar os cantos */
-    padding: 8px; /* Espaçamento interno para o conteúdo dentro do input */
+    border: 2px solid green; 
+    border-radius: 5px; 
+    padding: 8px; 
     outline: none;
 }
 
@@ -66,6 +66,24 @@ body {
     background-color: #90EE90;
     color: black;
     
+}
+.inputConsultar {
+    padding: 5px;
+    gap: 2px;
+    background-color: orange;
+    text-transform: uppercase;
+    color: black;
+    border-radius: 10px;
+    margin: 3px;
+    border: 2px solid orangered; 
+    border-radius: 5px; 
+    padding: 8px; 
+    outline: none;
+}
+
+.inputConsultar:hover {
+    background-color: orangered;
+    color: white;
 }
 
 /* Cadastro professor */
@@ -153,6 +171,25 @@ body {
     border-radius: 5px; /* Raio da borda para suavizar os cantos */
     padding: 8px; /* Espaçamento interno para o conteúdo dentro do input */
     outline: none;
+}
+
+
+.divDosIds {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: left;
+    padding: 7px;
+    border-radius: 5px; /* Raio da borda para suavizar os cantos */
+}
+
+.divDosIds > input {
+    border: 2px solid red; /* Largura, estilo e cor da borda */
+    border-radius: 5px; /* Raio da borda para suavizar os cantos */
+    padding: 8px; /* Espaçamento interno para o conteúdo dentro do input */
+    outline: none;
+    width: 60%;
 }
 
 .cadastroHorario > p {
