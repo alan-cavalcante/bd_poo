@@ -37,6 +37,7 @@
             <thead>
                 <tr>
                     <th>Dia</th>
+                    <th>Turno</th>
                     <th>Horário</th>
                     <th>Professor / Disciplina</th>
                 </tr>
@@ -44,6 +45,7 @@
             <% for (DadosConsultados objeto : dados) { %>
             <tr>
                 <td><%= objeto.getDiaSemana() %></td>
+                <td><%= objeto.getTurno() %></td>
                 <td><%= objeto.getHorarioInicio() %> - <%= objeto.getHorarioFim() %></td>
                 <td><%= objeto.getNomeDoProfessor() %> <br> <%= objeto.getNomeDaDisciplina() %></td>
                 <!--<td><%= objeto.getProfessorId() %></td>-->

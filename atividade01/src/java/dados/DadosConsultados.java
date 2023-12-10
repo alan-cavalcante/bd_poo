@@ -13,6 +13,7 @@ public class DadosConsultados {
     private int disciplinaId;
     private String nomeDoProfessor;
     private String nomeDaDisciplina;
+    private String turno;
 
     public String getDiaSemana() {
         return diaSemana;
@@ -69,4 +70,12 @@ public class DadosConsultados {
     public void setNomeDaDisciplina(String nomeDaDisciplina) {
         this.nomeDaDisciplina = nomeDaDisciplina;
     }
+        public String getTurno() {
+        return turno;
+    }
+    
+    public void setTurno(String turno){
+        this.turno = turno;
+    }
+    
 }

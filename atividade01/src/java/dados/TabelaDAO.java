@@ -20,7 +20,7 @@ import java.sql.ResultSetMetaData;
 
 public class TabelaDAO {
 
-    private static final String SELECT_QUERY = "SELECT h.dia_semana, h.horario_inicio, h.horario_fim, h.profId, h.discId, p.nomeprof AS nome_professor, d.nomedisc AS nome_disciplina FROM horarios h JOIN professores p ON h.profId = p.prof_id JOIN disciplinas d ON h.discId = d.disc_id";
+    private static final String SELECT_QUERY = "SELECT h.dia_semana, h.horario_inicio, h.horario_fim, h.profId, h.discId, h.turno, p.nomeprof AS nome_professor, d.nomedisc AS nome_disciplina FROM horarios h JOIN professores p ON h.profId = p.prof_id JOIN disciplinas d ON h.discId = d.disc_id";
     private static final String SELECT_IDSp = "SELECT prof_id, nomeprof FROM professores";
     private static final String SELECT_IDSd = "SELECT disc_id, nomedisc FROM disciplinas";
     
@@ -109,6 +109,8 @@ public class TabelaDAO {
                 System.out.println("nomeprof ok");
                 objeto.setNomeDaDisciplina(resultSet.getString("nome_disciplina"));
                 System.out.println("nomedisc ok");
+                objeto.setTurno(resultSet.getString("turno"));
+                System.out.println("turno ok");
                 dados.add(objeto);
             }
         } catch (SQLException e) {

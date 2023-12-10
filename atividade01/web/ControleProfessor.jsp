@@ -10,22 +10,27 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%
-           String jsp_nomeDoProfessor = request.getParameter("nomeProf");
+
+        <div class="container2">
+            <div class="suportecontainer">
+                <div class="professorCadastrado" >
+                    <p>O professor: </p>
+                    <%
+                       String jsp_nomeDoProfessor = request.getParameter("nomeProf");
            
-           Inserir a = new Inserir();
-           Armazena arm = new Armazena();
+                       Inserir a = new Inserir();
+                       Armazena arm = new Armazena();
            
-           arm.setNomeDoProfessor(jsp_nomeDoProfessor);
+                       arm.setNomeDoProfessor(jsp_nomeDoProfessor);
            
-           
-           Conexao b = new Conexao();
-           
-           out.println("O professor " + arm.getNomeDoProfessor() + " foi cadastrado.");
-//           out.println(arm.getNomeDoProfessor());
-           
-           a.inserirProfessor(arm);
-        %>
-        <a href="index.html">Voltar</a>
+                       Conexao b = new Conexao();
+                       out.println("<b>" + arm.getNomeDoProfessor() + "</b>");
+                       a.inserirProfessor(arm);
+                    %>
+                    <p>foi cadastrado.</p>
+                    <a href="index.html" class="inputCadastrar" style="text-decoration: none" >VOLTAR</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

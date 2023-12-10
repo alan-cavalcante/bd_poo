@@ -64,6 +64,16 @@
 
             <script>
 
+                function chamarCadastroProf() {
+                    const xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            document.getElementById("areaDeAmostra").innerHTML = xhr.responseText;
+                        }
+                    };
+                    xhr.open("GET", "Classeteste.java", true);
+                    xhr.send();
+                }
                 function chamarConsultaIdsD() {
                     const xhr = new XMLHttpRequest();
                     xhr.onreadystatechange = function () {

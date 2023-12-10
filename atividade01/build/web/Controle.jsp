@@ -11,7 +11,13 @@
     </head>
     <body>
         <%
-           String jsp_diaSemana = request.getParameter("diaSemana");
+           
+        %>
+         <div class="container2">
+            <div class="suportecontainer">
+                <div class="professorCadastrado" >
+                    <%
+                       String jsp_diaSemana = request.getParameter("diaSemana");
            String jsp_horarioInicio = request.getParameter("horarioInicio");
            String jsp_horarioFim = request.getParameter("horarioFim");
            String jsp_disciplinaId = request.getParameter("disciplinaId");
@@ -34,14 +40,12 @@
            
            // out.println(b.getConnection());
            
-           out.println(arm.getDiaSemana());
-           out.println(arm.getHorarioInicio());
-           out.println(arm.getHorarioFim());
-           out.println(arm.getDisciplinaId());
-           out.println(arm.getProfessorId());
-           out.println(arm.getTurno());
-           
+           out.println("Horário cadastrado para: " + arm.getDiaSemana() + " das " + arm.getHorarioInicio() + " às " + arm.getHorarioFim() + " no turno " + arm.getTurno() + "<br>" );
            a.inserirDados(arm);
-        %>
+                    %>
+                    <a href="index.html" class="inputCadastrar" style="text-decoration: none" >VOLTAR</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
